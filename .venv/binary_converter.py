@@ -22,18 +22,18 @@ def converter(num, direction):
             elif 2**i <= difference:
                 binary_string += '1'
                 y = 2**i
-                difference = difference - y
+                difference -= y
         return binary_string
 
     elif direction == 'decimal':
-        dec_float = 0
+        dec_num = 0
         for n in enumerate(reversed(num)):
             x = n[0]
             include = n[1]
             if include == '1':
-                y = 2**(x)
-                dec_float += y
-        return dec_float
+                y = 2**x
+                dec_num += y
+        return dec_num
 
 
 if __name__ == '__main__':
