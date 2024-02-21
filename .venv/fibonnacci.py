@@ -4,6 +4,7 @@ Fibonacci Sequence - Enter a number and have the program generate the Fibonacci 
 
 """
 
+
 def Fibonacci(num):
     if num == 0:
         value = 0
@@ -18,11 +19,14 @@ def Fibonacci(num):
     return value, sequence
 
 
+def main():
+    for n in range(0, 20):
+        print(Fibonacci(n)[1])
 
 
 if __name__ == '__main__':
-    for n in range(0, 20):
-        print(Fibonacci(n)[1])
+    main()
+
 
 
 
